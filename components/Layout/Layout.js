@@ -1,7 +1,7 @@
 import propTypes from 'prop-types'
 import { Footer, Header } from 'components'
 
-import styles from 'styles/components/layout.module.sass'
+import styles from 'styles/components/Layout.module.sass'
 
 const Layout = ({ children }) => {
   return (

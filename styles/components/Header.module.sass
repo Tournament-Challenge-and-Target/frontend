@@ -1,0 +1,30 @@
+@import styles/fonts
+@import styles/variables
+
+.header
+  width: 100%
+  display: grid
+  grid-template-columns: 20% 80%
+  padding: 1rem 0
+  margin-bottom: 6rem
+
+  .title
+    span
+      color: $third-color
+
+  .nav
+    width: 100%
+    display: flex
+    align-items: center
+    justify-content: flex-end
+
+    .nav__menu
+      display: flex
+      list-style: none
+
+      .menu__item
+        margin-right: 2rem
+        font-family: MontserratMedium
+
+        &:last-of-type
+          margin-right: unset

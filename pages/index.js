@@ -3,10 +3,6 @@ import Link from 'next/link'
 
 import styles from 'styles/components/Home.module.sass'
 
-import fifa from 'public/images/fifa.svg'
-import overwatch from 'public/images/overwatch.svg'
-import lol from 'public/images/lol.svg'
-
 export default function Home() {
   return (
     <>
@@ -49,23 +45,23 @@ export default function Home() {
           </div>
 
           <div className={styles.right_content}>
-            <span className={styles.imageContainer}>
-              <div>
-                <img src={fifa} className={styles.fifa} />
+            <div className={styles.imageContainer}>
+              <div className={styles.wrapper_1}>
+                <img src="images/fifa.svg" className={styles.fifa} />
               </div>
-            </span>
+            </div>
 
-            <span className={styles.imageContainer}>
-              <div>
-                <img src={overwatch} className={styles.overwatch} />
+            <div className={styles.imageContainer}>
+              <div className={styles.wrapper_2}>
+                <img src="images/overwatch.svg" className={styles.overwatch} />
               </div>
-            </span>
+            </div>
 
-            <span className={styles.imageContainer}>
-              <div>
-                <img src={lol} className={styles.lol} />
+            <div className={styles.imageContainer}>
+              <div className={styles.wrapper_3}>
+                <img src="images/lol.svg" className={styles.lol} />
               </div>
-            </span>
+            </div>
           </div>
         </section>
       </main>

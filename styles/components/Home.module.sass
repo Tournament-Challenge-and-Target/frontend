@@ -6,8 +6,11 @@
   flex-direction: column
 
   .intro
+    height: 100%
+    min-height: 32rem
     display: grid
-    grid-template-columns: 40% 60%
+    grid-template-columns: 40% 1fr
+    column-gap: 2rem
 
     .left_content
       display: flex
@@ -53,7 +56,7 @@
     .right_content
       position: relative
       display: grid
-      grid-template-columns: repeat(3, 15rem) // 260px
+      grid-template-columns: repeat(3, 14rem) // 260px
       column-gap: 2rem
 
       .imageContainer

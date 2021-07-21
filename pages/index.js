@@ -18,7 +18,7 @@ export default function Home() {
         <section className={styles.intro}>
           <div className={styles.left_content}>
             <h1 className={styles.content__title}>
-              Torneos eSports en un único lugar. ¿Listo para entrar?{' '}
+              Torneos de eSports en un único lugar. ¿Listo para entrar?{' '}
               <span>¡Es gratis!</span>
             </h1>
 

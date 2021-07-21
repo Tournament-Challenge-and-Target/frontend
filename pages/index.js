@@ -1,6 +1,5 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Image from 'next/image'
 
 import styles from 'styles/components/Home.module.sass'
 
@@ -52,19 +51,19 @@ export default function Home() {
           <div className={styles.right_content}>
             <span className={styles.imageContainer}>
               <div>
-                <Image src={fifa} className={styles.fifa} />
+                <img src={fifa} className={styles.fifa} />
               </div>
             </span>
 
             <span className={styles.imageContainer}>
               <div>
-                <Image src={overwatch} className={styles.overwatch} />
+                <img src={overwatch} className={styles.overwatch} />
               </div>
             </span>
 
             <span className={styles.imageContainer}>
               <div>
-                <Image src={lol} className={styles.lol} />
+                <img src={lol} className={styles.lol} />
               </div>
             </span>
           </div>

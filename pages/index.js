@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+import { InfluencerSlider } from 'components'
+
 import styles from 'styles/components/Home.module.sass'
 
 export default function Home() {
@@ -10,7 +12,7 @@ export default function Home() {
         <title>Tournament Challenge And Target</title>
         <meta
           name="description"
-          content="we are the definitive and disruptive tournament platform for eSports."
+          content="We are the definitive and disruptive tournament platform for eSports. Are you prepared?"
         />
       </Head>
 
@@ -63,6 +65,10 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section classNames={styles.one_column}>
+          <InfluencerSlider />
         </section>
       </main>
     </>

@@ -1,0 +1,44 @@
+@import styles/variables
+
+.card
+  cursor: pointer
+  width: 20rem
+  height: auto
+  display: flex
+  border-radius: .5rem
+  padding: .7rem
+  background-color: rgba($primary-color, .1)
+  transition: background-color .1s ease-in-out
+
+  &:hover
+    background-color: $secondary-color
+
+    .card__image
+      border-color: $primary-color
+
+  .card__image
+    width: 4rem
+    height: 4.5rem
+    border-radius: 1rem
+    overflow: hidden
+    margin-right: 1rem
+    border: solid 2px transparent
+    transition: background-color .3s ease-in-out
+
+    .image
+      width: 100%
+      height: auto
+
+  .card__content
+    display: flex
+    flex-direction: column
+    justify-content: center
+
+    .name
+      font-weight: 600
+      letter-spacing: .1rem
+      margin-bottom: .3rem
+
+    .followers
+      size: .9rem
+      color: #DEDEDE

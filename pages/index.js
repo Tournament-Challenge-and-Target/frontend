@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section classNames={styles.one_column}>
+        <section className={styles.one_column}>
           <InfluencerSlider />
         </section>
       </main>

@@ -1,7 +1,7 @@
 import styles from 'styles/pages/Access.module.sass'
 
 const Access = () => {
-  const handeOnSubmit = () => {}
+  const handeOnSubmit = (): void => {}
   return (
     <div className={styles.access}>
       <div className={styles.twin_container}>

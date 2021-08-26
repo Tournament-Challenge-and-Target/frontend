@@ -5,7 +5,7 @@ import { InfluencerSlider } from 'components'
 
 import styles from 'styles/components/Home.module.sass'
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Head>
@@ -74,3 +74,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

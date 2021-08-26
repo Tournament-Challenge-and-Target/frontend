@@ -1,7 +1,11 @@
 import styles from 'styles/pages/Access.module.sass'
 
 const Access = () => {
-  const handeOnSubmit = (): void => {}
+  const handeOnSubmit = (e): void => {
+    e.preventDefault()
+    console.log('submit')
+  }
+
   return (
     <div className={styles.access}>
       <div className={styles.twin_container}>

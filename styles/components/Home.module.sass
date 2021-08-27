@@ -8,25 +8,29 @@
   .intro
     height: 100%
     min-height: 32rem
-    display: grid
-    grid-template-columns: 40% 1fr
-    column-gap: 2rem
+    display: flex
+    flex-direction: column
     margin-bottom: 4rem
 
-    .left_content
+    .content_title
       display: flex
       flex-direction: column
+      font-size: 2.5rem
+      text-transform: uppercase
+      text-align: center
 
-      .content__title
-        font-size: 2.5rem
+      .title
+        color: $fourth-color
+
+        .highlight
+          color: $primary-color
+
+
+      .subtitle
+        font-size: 1.7rem
         margin-bottom: 2rem
-
-        span
-          color: $third-color
-
-      .explanation
-        font-size: .9rem
-        margin-bottom: 2rem
+        font-weight: 400
+        color: $fourth-color
 
       .action_button
         display: flex
@@ -53,54 +57,6 @@
             &.light
               border: solid 1px $primary-color
               background-color: transparent
-
-    .right_content
-      position: relative
-      display: grid
-      grid-template-columns: repeat(3, 14rem) // 260px
-      column-gap: 2rem
-
-      .imageContainer
-        position: relative
-        height: 27rem
-
-        &:last-of-type
-          margin-right: unset
-
-        .wrapper_1, .wrapper_2, .wrapper_3
-          position: absolute
-          width: 100%
-          height: 27rem
-          border-radius: .4rem
-          background-color: rgba($secondary-color, .1)
-
-          .fifa, .overwatch, .lol
-            position: absolute
-
-          .fifa
-            bottom: -.2rem
-            left: -1rem
-
-          .overwatch
-            width: 20rem
-            left: -4.6rem
-            bottom: -1rem
-            transform: rotate(358deg)
-
-          .lol
-            width: 30rem
-            height: auto
-            top: -5rem
-            left: -7rem
-
-        .wrapper_1
-          top: 5rem
-
-        .wrapper_2
-          top: 1rem
-
-        .wrapper_3
-          top: -3rem
 
   .one_column
     width: 100%

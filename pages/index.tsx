@@ -1,7 +1,6 @@
 import Head from 'next/head'
-import Link from 'next/link'
 
-import { InfluencerSlider } from 'components'
+import { Link, InfluencerSlider } from 'components'
 
 import styles from 'styles/components/Home.module.sass'
 
@@ -25,17 +24,9 @@ const Home = () => {
             <span className={styles.subtitle}>en un mismo sitio</span>
           </h1>
 
-          <div className={styles.action_button}>
-            <Link href="/">
-              <a className={`${styles.link} ${styles.button} ${styles.active}`}>
-                Entra ahora
-              </a>
-            </Link>
-            <Link href="/">
-              <a className={`${styles.link} ${styles.button} ${styles.light}`}>
-                Ver precios
-              </a>
-            </Link>
+          <div className={styles.action_links}>
+            <Link href="/" text="Regístrate" boxed primary />
+            <Link href="/" text="Identifícate" boxed light />
           </div>
         </section>
 

@@ -7,10 +7,15 @@
 
   .intro
     height: 100%
-    min-height: 32rem
+    min-height: 35rem
     display: flex
     flex-direction: column
+    justify-content: space-between
     margin-bottom: 4rem
+    padding: 1rem 0 1.5rem
+    background-image: url('/images/home-background.svg')
+    background-position: center center
+    background-size: cover
 
     .content_title
       display: flex
@@ -25,38 +30,38 @@
         .highlight
           color: $primary-color
 
-
       .subtitle
         font-size: 1.7rem
         margin-bottom: 2rem
         font-weight: 400
         color: $fourth-color
 
-      .action_button
-        display: flex
+    .action_button
+      display: flex
+      justify-content: center
 
-        .link
-          font-family: MontserratMedium
+      .link
+        font-family: MontserratMedium
 
-          &:first-child
-            margin-right: 2rem
+        &:first-child
+          margin-right: 2rem
 
-          &.button
-            padding: 1rem 1.5rem
-            border-radius: .3rem
+        &.button
+          padding: 1rem 1.5rem
+          border-radius: .3rem
 
-            &.active
-              border: solid 1px transparent
-              background-color: $secondary-color
+          &.active
+            border: solid 1px transparent
+            background-color: $secondary-color
 
-              &:hover
-                background-color: rgba(black, .5)
-                color: white
-                border: solid 1px $primary-color
-
-            &.light
+            &:hover
+              background-color: rgba(black, .5)
+              color: white
               border: solid 1px $primary-color
-              background-color: transparent
+
+          &.light
+            border: solid 1px $primary-color
+            background-color: transparent
 
   .one_column
     width: 100%

@@ -1,8 +1,18 @@
-import propTypes from 'prop-types'
+import React from 'react'
 
 import styles from 'styles/components/InfluencerCard.module.sass'
 
-const InfluencerCard = ({ urlImg, name, followers }) => {
+type Props = {
+  urlImg: string
+  name: string
+  followers: number
+}
+
+const InfluencerCard = ({
+  urlImg,
+  name,
+  followers,
+}: Props): React.ReactElement => {
   return (
     <span className={styles.card}>
       <div className={styles.card__image}>
@@ -17,12 +27,6 @@ const InfluencerCard = ({ urlImg, name, followers }) => {
       </div>
     </span>
   )
-}
-
-InfluencerCard.propTypes = {
-  urlImg: propTypes.string.isRequired,
-  name: propTypes.string.isRequired,
-  followers: propTypes.number.isRequired,
 }
 
 export default InfluencerCard

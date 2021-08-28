@@ -1,8 +1,9 @@
+import React from 'react'
 import Link from 'next/link'
 
 import styles from 'styles/components/Header.module.sass'
 
-const Header = () => {
+const Header = (): React.ReactElement => {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>

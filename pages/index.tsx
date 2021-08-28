@@ -1,10 +1,11 @@
+import React from 'react'
 import Head from 'next/head'
 
 import { Link, InfluencerSlider } from 'components'
 
 import styles from 'styles/pages/Home.module.sass'
 
-const Home = () => {
+const Home = (): React.ReactElement => {
   return (
     <>
       <Head>

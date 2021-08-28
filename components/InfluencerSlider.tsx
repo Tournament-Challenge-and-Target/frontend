@@ -1,8 +1,9 @@
+import React from 'react'
 import { InfluencerCard } from 'components'
 
 import styles from 'styles/components/InfluencersSlider.module.sass'
 
-const InfluencerSlider = () => {
+const InfluencerSlider = (): React.ReactElement => {
   return (
     <div className={styles.wrapper}>
       <h3 className={styles.title}>Popular Streamers</h3>

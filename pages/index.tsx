@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import { Link, InfluencerSlider } from 'components'
 
-import styles from 'styles/components/Home.module.sass'
+import styles from 'styles/pages/Home.module.sass'
 
 const Home = () => {
   return (
@@ -25,8 +25,8 @@ const Home = () => {
           </h1>
 
           <div className={styles.action_links}>
-            <Link href="/" text="Regístrate" boxed primary />
-            <Link href="/" text="Identifícate" boxed light />
+            <Link href="/access" text="Regístrate" boxed primary />
+            <Link href="/access" text="Identifícate" boxed light />
           </div>
         </section>
 

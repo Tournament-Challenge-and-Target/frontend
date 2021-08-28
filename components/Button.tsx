@@ -4,10 +4,10 @@ import styles from 'styles/components/Button.module.sass'
 
 type props = {
   text: string
-  primary: string
-  secundary: string
-  third: string
-  light: string
+  primary?: string
+  secundary?: string
+  third?: string
+  light?: string
   handleOnClick: () => void
 }
 

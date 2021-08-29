@@ -6,6 +6,7 @@ import styles from 'styles/components/Link.module.sass'
 
 type props = {
   boxed?: boolean
+  children?: React.ReactNode
   href: string
   light?: boolean
   primary?: boolean
@@ -16,6 +17,7 @@ type props = {
 
 const Link = ({
   boxed,
+  children,
   href,
   light,
   primary,
@@ -34,7 +36,7 @@ const Link = ({
   })
   return (
     <Anchor href={href}>
-      <a className={anchor}>{text}</a>
+      <a className={anchor}>{text || children}</a>
     </Anchor>
   )
 }

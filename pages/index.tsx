@@ -32,6 +32,31 @@ const Home = (): React.ReactElement => {
         </section>
 
         <section className={styles.one_column}>
+          <div className={styles.features}>
+            <span className={styles.feature}>
+              <Link href="/">
+                <img src="images/icons/trofeo.png" />
+              </Link>
+              <h3 className={styles.feature__title}>Trofeos</h3>
+            </span>
+
+            <span className={styles.feature}>
+              <Link href="/">
+                <img src="images/icons/mando.svg" />
+              </Link>
+              <h3 className={styles.feature__title}>Mejoras</h3>
+            </span>
+
+            <span className={styles.feature}>
+              <Link href="/">
+                <img src="images/icons/1up.svg" />
+              </Link>
+              <h3 className={styles.feature__title}>Tokens</h3>
+            </span>
+          </div>
+        </section>
+
+        <section className={styles.one_column}>
           <InfluencerSlider />
         </section>
       </main>

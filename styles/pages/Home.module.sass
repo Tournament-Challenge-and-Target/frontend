@@ -49,3 +49,22 @@
   .one_column
     width: 100%
     height: auto
+    margin-bottom: 5rem
+
+    &:last-child
+      margin-bottom: unset
+
+    .features
+      display: grid
+      grid-template-columns: 1fr 1fr 1fr
+      width: 100%
+      height: auto
+
+      .feature
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        align-items: center
+
+        .__title
+          text-transform: uppercase

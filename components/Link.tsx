@@ -11,7 +11,7 @@ type props = {
   light?: boolean
   primary?: boolean
   secundary?: boolean
-  text: string
+  text?: string
   third?: boolean
 }
 

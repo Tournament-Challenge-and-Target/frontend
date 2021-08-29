@@ -7,26 +7,26 @@ const Header = (): React.ReactElement => {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>
-        1<span>up</span>gaming
+        1<span>UP</span>gaming
       </h1>
 
       <nav className={styles.nav}>
         <ul className={styles.nav__menu}>
           <li className={styles.menu__item}>
             <Link href="/">
-              <a>Home</a>
+              <a>Inicio</a>
             </Link>
           </li>
 
           <li className={styles.menu__item}>
             <Link href="/about-us">
-              <a>About Us</a>
+              <a>Sobre nosotros</a>
             </Link>
           </li>
 
           <li className={styles.menu__item}>
             <Link href="/access">
-              <a>Login</a>
+              <a>Identifícate</a>
             </Link>
           </li>
         </ul>

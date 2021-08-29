@@ -6,7 +6,7 @@ import styles from 'styles/components/InfluencersSlider.module.sass'
 const InfluencerSlider = (): React.ReactElement => {
   return (
     <div className={styles.wrapper}>
-      <h3 className={styles.title}>Popular Streamers</h3>
+      <h3 className={styles.title}>Nuestros streamers más activos</h3>
       <InfluencerCard
         urlImg="https://images.unsplash.com/photo-1558788353-f76d92427f16?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=678&q=80"
         name="Julius The Dog"

@@ -4,18 +4,18 @@ import styles from 'styles/components/Button.module.sass'
 
 type props = {
   text: string
-  primary?: string
-  secundary?: string
-  third?: string
-  light?: string
-  handleOnClick: () => void
+  primary?: boolean
+  secundary?: boolean
+  tertiary?: boolean
+  light?: boolean
+  handleOnClick?: () => void
 }
 
 const Button = ({
   text,
   primary,
   secundary,
-  third,
+  tertiary,
   light,
   handleOnClick,
 }: props): React.ReactElement => {
@@ -23,7 +23,7 @@ const Button = ({
     [styles.button]: true,
     [styles.primary]: primary,
     [styles.secundary]: secundary,
-    [styles.third]: third,
+    [styles.tertiary]: tertiary,
     [styles.light]: light,
   })
 

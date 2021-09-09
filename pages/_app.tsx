@@ -1,19 +1,19 @@
-import propTypes from 'prop-types'
+import React from 'react'
 import { Layout } from 'components'
 
 import 'styles/globals.sass'
 
-function MyApp({ Component, pageProps }) {
+type AppProps = {
+  Component: React.FC
+  pageProps: any
+}
+
+function MyApp({ Component, pageProps }: AppProps): React.ReactNode {
   return (
     <Layout>
       <Component {...pageProps} />
     </Layout>
   )
-}
-
-MyApp.propTypes = {
-  Component: propTypes.func,
-  pageProps: propTypes.object,
 }
 
 export default MyApp

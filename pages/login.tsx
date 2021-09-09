@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import { login } from 'api/access'
 import { Button, Link } from 'components'
-import classNames from 'classnames'
 
 import styles from 'styles/pages/Login.module.sass'
 

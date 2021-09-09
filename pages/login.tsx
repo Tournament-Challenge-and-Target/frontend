@@ -73,7 +73,7 @@ const Login = (): React.ReactNode => {
 
           <p className={styles.information}>
             ¿No tienes una cuenta? Crea una{' '}
-            <Link href="create-account" text="aquí" primary></Link>
+            <Link href="/create-account" text="aquí" primary></Link>
           </p>
         </div>
       </div>

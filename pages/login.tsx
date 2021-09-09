@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Head from 'next/head'
 import { login } from 'api/access'
 import { Button, Link } from 'components'
+import classNames from 'classnames'
+
 import styles from 'styles/pages/Login.module.sass'
 
 interface fieldsType {
@@ -25,6 +27,8 @@ const Login = (): React.ReactNode => {
     setFields({ ...fields, [name]: value })
   }
 
+  const disabledButton = !fields.username || !fields.password
+
   return (
     <>
       <Head>
@@ -46,6 +50,7 @@ const Login = (): React.ReactNode => {
                 onChange={handleOnChange}
                 placeholder=" "
                 type="text"
+                required
               />
               <span className={styles.textLabel}>E-mail</span>
               <div className={styles.hasBorder} />
@@ -58,12 +63,13 @@ const Login = (): React.ReactNode => {
                 onChange={handleOnChange}
                 placeholder=" "
                 type="password"
+                required
               />
               <span className={styles.textLabel}>Contraseña</span>
               <div className={styles.hasBorder} />
             </label>
 
-            <Button primary text="Identificarme" />
+            <Button primary disabled={disabledButton} text="IDENFTIFICARME" />
           </form>
 
           <p className={styles.information}>

@@ -1,6 +1,7 @@
 @import styles/variables
 
 .button
+  cursor: pointer
   font-family: MontserratMedium
   padding: 1rem 1.5rem
   border-radius: .3rem
@@ -8,9 +9,15 @@
 
   &.primary
     background-color: $primary-color
-    color: $quaternary-color
+    color: $fifth-color
+    font-weight: 600
 
   &.light
     border: solid 1px $primary-color
     background-color: transparent
+    color: $quaternary-color
+
+  &.disabled
+    pointer-events: none
+    background-color: $tertiary-color
     color: $quaternary-color

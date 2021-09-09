@@ -7,6 +7,7 @@ type props = {
   primary?: boolean
   secundary?: boolean
   tertiary?: boolean
+  disabled?: boolean
   light?: boolean
   handleOnClick?: () => void
 }
@@ -16,6 +17,7 @@ const Button = ({
   primary,
   secundary,
   tertiary,
+  disabled,
   light,
   handleOnClick,
 }: props): React.ReactElement => {
@@ -25,6 +27,7 @@ const Button = ({
     [styles.secundary]: secundary,
     [styles.tertiary]: tertiary,
     [styles.light]: light,
+    [styles.disabled]: disabled,
   })
 
   return (

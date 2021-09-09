@@ -25,7 +25,7 @@ const Header = (): React.ReactElement => {
           </li>
 
           <li className={styles.menu__item}>
-            <Link href="/access">
+            <Link href="/login">
               <a>Identifícate</a>
             </Link>
           </li>

@@ -1,4 +1,6 @@
 import React from 'react'
+import { Provider } from 'react-redux'
+import store from 'redux/store'
 import { Layout } from 'components'
 
 import 'styles/globals.sass'
@@ -10,9 +12,11 @@ type AppProps = {
 
 function MyApp({ Component, pageProps }: AppProps): React.ReactNode {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <Provider store={store}>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </Provider>
   )
 }
 

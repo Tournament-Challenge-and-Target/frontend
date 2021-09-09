@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Head from 'next/head'
-import { Button } from 'components'
-import styles from 'styles/pages/Access.module.sass'
+import { login } from 'api/access'
+import { Button, Link } from 'components'
+import styles from 'styles/pages/Login.module.sass'
 
-const Access = (): React.ReactNode => {
+interface fieldsType {
+  username: string
+  password: string
+}
+
+const Login = (): React.ReactNode => {
+  const [fields, setFields] = useState<fieldsType>({
+    username: '',
+    password: '',
+  })
+
   const handeOnSubmit = (e): void => {
     e.preventDefault()
-    console.log('submit')
+    login(fields).then((response) => console.log(response.data))
+  }
+
+  const handleOnChange = (e): void => {
+    const { name, value } = e.target
+    setFields({ ...fields, [name]: value })
   }
 
   return (
@@ -18,7 +34,7 @@ const Access = (): React.ReactNode => {
           content="Página de acceso y registro para usuarios de 1UpGaming"
         />
       </Head>
-      <div className={styles.access}>
+      <div className={styles.login}>
         <div className={styles.content}>
           <h1 className={styles.title}>¡Bienvenido de nuevo!</h1>
 
@@ -26,9 +42,10 @@ const Access = (): React.ReactNode => {
             <label htmlFor="email" className={styles.label}>
               <input
                 className={`${styles.input} ${styles.light}`}
-                type="email"
-                name="email"
+                name="username"
+                onChange={handleOnChange}
                 placeholder=" "
+                type="text"
               />
               <span className={styles.textLabel}>E-mail</span>
               <div className={styles.hasBorder} />
@@ -37,9 +54,10 @@ const Access = (): React.ReactNode => {
             <label htmlFor="password" className={styles.label}>
               <input
                 className={`${styles.input} ${styles.light}`}
-                type="password"
                 name="password"
+                onChange={handleOnChange}
                 placeholder=" "
+                type="password"
               />
               <span className={styles.textLabel}>Contraseña</span>
               <div className={styles.hasBorder} />
@@ -47,10 +65,15 @@ const Access = (): React.ReactNode => {
 
             <Button primary text="Identificarme" />
           </form>
+
+          <p className={styles.information}>
+            ¿No tienes una cuenta? Crea una{' '}
+            <Link href="create-account" text="aquí" primary></Link>
+          </p>
         </div>
       </div>
     </>
   )
 }
 
-export default Access
+export default Login

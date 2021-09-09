@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "axios": "^0.21.4",
     "classnames": "^2.3.1",
     "next": "11.0.1",
     "prop-types": "^15.7.2",

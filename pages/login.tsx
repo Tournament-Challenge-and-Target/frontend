@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { setLogin } from 'redux/actions/users'
+import { userLogin } from 'redux/actions/users'
 import Head from 'next/head'
 import { login } from 'api/access'
 import { Button, Link } from 'components'
@@ -23,7 +23,7 @@ const Login = (): React.ReactNode => {
   const handeOnSubmit = (e): void => {
     e.preventDefault()
     login(fields)
-      .then((response) => dispatch(setLogin(response.data)))
+      .then((response) => dispatch(userLogin(response.data)))
       .catch((error) => console.log(error))
   }
 

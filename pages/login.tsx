@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { setLogin } from 'redux/actions/users'
 import Head from 'next/head'
 import { login } from 'api/access'
 import { Button, Link } from 'components'
@@ -11,6 +13,8 @@ interface fieldsType {
 }
 
 const Login = (): React.ReactNode => {
+  const dispatch = useDispatch()
+
   const [fields, setFields] = useState<fieldsType>({
     username: '',
     password: '',
@@ -18,7 +22,9 @@ const Login = (): React.ReactNode => {
 
   const handeOnSubmit = (e): void => {
     e.preventDefault()
-    login(fields).then((response) => console.log(response.data))
+    login(fields)
+      .then((response) => dispatch(setLogin(response.data)))
+      .catch((error) => console.log(error))
   }
 
   const handleOnChange = (e): void => {
@@ -41,7 +47,11 @@ const Login = (): React.ReactNode => {
         <div className={styles.content}>
           <h1 className={styles.title}>¡Bienvenido de nuevo!</h1>
 
-          <form className={styles.loginForm} onSubmit={handeOnSubmit}>
+          <form
+            className={styles.loginForm}
+            onSubmit={handeOnSubmit}
+            autoComplete="off"
+          >
             <label htmlFor="email" className={styles.label}>
               <input
                 className={`${styles.input} ${styles.light}`}
@@ -51,7 +61,7 @@ const Login = (): React.ReactNode => {
                 type="text"
                 required
               />
-              <span className={styles.textLabel}>E-mail</span>
+              <span className={styles.textLabel}>Nickname</span>
               <div className={styles.hasBorder} />
             </label>
 

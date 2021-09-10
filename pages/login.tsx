@@ -4,7 +4,7 @@ import { userLogin } from 'redux/actions/users'
 import { isLoading } from 'redux/actions/app'
 import Head from 'next/head'
 import { login } from 'api/access'
-import { Button, Link, Input, Spinner } from 'components'
+import { Button, Link, Input } from 'components'
 
 import styles from 'styles/pages/Login.module.sass'
 

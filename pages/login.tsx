@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { userLogin } from 'redux/actions/users'
 import Head from 'next/head'
 import { login } from 'api/access'
-import { Button, Link } from 'components'
+import { Button, Link, Input } from 'components'
 
 import styles from 'styles/pages/Login.module.sass'
 
@@ -52,31 +52,23 @@ const Login = (): React.ReactNode => {
             onSubmit={handeOnSubmit}
             autoComplete="off"
           >
-            <label htmlFor="email" className={styles.label}>
-              <input
-                className={`${styles.input} ${styles.light}`}
-                name="username"
-                onChange={handleOnChange}
-                placeholder=" "
-                type="text"
-                required
-              />
-              <span className={styles.textLabel}>Nickname</span>
-              <div className={styles.hasBorder} />
-            </label>
+            <Input
+              handleOnChange={handleOnChange}
+              light
+              name="username"
+              palceholder=" "
+              textLabel="Usuario"
+              type="text"
+            />
 
-            <label htmlFor="password" className={styles.label}>
-              <input
-                className={`${styles.input} ${styles.light}`}
-                name="password"
-                onChange={handleOnChange}
-                placeholder=" "
-                type="password"
-                required
-              />
-              <span className={styles.textLabel}>Contraseña</span>
-              <div className={styles.hasBorder} />
-            </label>
+            <Input
+              handleOnChange={handleOnChange}
+              light
+              name="password"
+              palceholder=" "
+              textLabel="Contraseña"
+              type="password"
+            />
 
             <Button primary disabled={disabledButton} text="IDENFTIFICARME" />
           </form>

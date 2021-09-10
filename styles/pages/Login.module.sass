@@ -23,47 +23,6 @@
       flex-direction: column
       margin-bottom: 2rem
 
-      .label
-        position: relative
-        display: flex
-        flex-direction: column
-        margin-bottom: 4rem
-
-        .input
-          width: 100%
-
-        .light
-          outline: none
-          padding-bottom: .5rem
-          color: $quaternary-color
-          background-color: transparent
-          border: unset
-          padding-left: .3rem
-          border-bottom: solid 1px $quaternary-color
-
-          &:focus, &:not(:placeholder-shown)
-            +.textLabel
-              transform: translateY(-1.7rem)
-
-            ~.hasBorder
-              width: 100%
-              border-bottom: solid 2px $primary-color
-
-        .textLabel
-          position: absolute
-          top: 0
-          left: 0
-          pointer-events: none
-          color: $primary-color
-          transition: transform .2s ease-in-out
-
-        .hasBorder
-          position: absolute
-          bottom: 0
-          left: 0
-          width: 0%
-          transition: width .3s ease-in-out
-
     .information
       width: 100%
       text-align: center

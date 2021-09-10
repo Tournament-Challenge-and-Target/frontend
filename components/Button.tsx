@@ -1,5 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import classNames from 'classnames'
+import { Spinner } from 'components'
+
 import styles from 'styles/components/Button.module.sass'
 
 type props = {
@@ -21,18 +24,20 @@ const Button = ({
   light,
   handleOnClick,
 }: props): React.ReactElement => {
+  const { isLoading } = useSelector((state: any) => state.app)
+
   const button = classNames({
     [styles.button]: true,
     [styles.primary]: primary,
     [styles.secundary]: secundary,
     [styles.tertiary]: tertiary,
     [styles.light]: light,
-    [styles.disabled]: disabled,
+    [styles.disabled]: disabled || isLoading,
   })
 
   return (
     <button className={button} onClick={handleOnClick}>
-      {text}
+      {isLoading ? <Spinner /> : text}
     </button>
   )
 }

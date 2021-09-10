@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { userLogin } from 'redux/actions/users'
+import { isLoading } from 'redux/actions/app'
 import Head from 'next/head'
 import { login } from 'api/access'
 import { Button, Link, Input, Spinner } from 'components'
@@ -22,9 +23,15 @@ const Login = (): React.ReactNode => {
 
   const handeOnSubmit = (e): void => {
     e.preventDefault()
+    dispatch(isLoading(true))
+
     login(fields)
       .then((response) => dispatch(userLogin(response.data)))
-      .catch((error) => console.log(error))
+      .then(() => dispatch(isLoading(false)))
+      .catch((error) => {
+        console.log(error)
+        dispatch(isLoading(false))
+      })
   }
 
   const handleOnChange = (e): void => {
@@ -71,7 +78,6 @@ const Login = (): React.ReactNode => {
             />
 
             <Button primary disabled={disabledButton} text="IDENFTIFICARME" />
-            <Spinner />
           </form>
 
           <p className={styles.information}>

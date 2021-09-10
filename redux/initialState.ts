@@ -1,4 +1,7 @@
 export default {
+  app: {
+    isLoading: false,
+  },
   users: {
     access_token: '',
     expires_in: '',

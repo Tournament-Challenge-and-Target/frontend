@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux'
 import { userLogin } from 'redux/actions/users'
 import Head from 'next/head'
 import { login } from 'api/access'
-import { Button, Link, Input } from 'components'
+import { Button, Link, Input, Spinner } from 'components'
 
 import styles from 'styles/pages/Login.module.sass'
 
@@ -71,6 +71,7 @@ const Login = (): React.ReactNode => {
             />
 
             <Button primary disabled={disabledButton} text="IDENFTIFICARME" />
+            <Spinner />
           </form>
 
           <p className={styles.information}>

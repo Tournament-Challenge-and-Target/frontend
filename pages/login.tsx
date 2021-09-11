@@ -63,7 +63,7 @@ const Login = (): React.ReactNode => {
               handleOnChange={handleOnChange}
               light
               name="username"
-              palceholder=" "
+              placeholder=" "
               textLabel="Usuario"
               type="text"
             />
@@ -72,7 +72,7 @@ const Login = (): React.ReactNode => {
               handleOnChange={handleOnChange}
               light
               name="password"
-              palceholder=" "
+              placeholder=" "
               textLabel="Contraseña"
               type="password"
             />

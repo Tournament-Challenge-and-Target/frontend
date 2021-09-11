@@ -7,7 +7,7 @@ type Props = {
   handleOnChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   light?: boolean
   name: string
-  palceholder?: string
+  placeholder?: string
   required?: boolean
   textLabel: string
   type: string
@@ -17,7 +17,7 @@ const Input = ({
   handleOnChange,
   light,
   name,
-  palceholder,
+  placeholder,
   required,
   textLabel,
   type,
@@ -32,7 +32,7 @@ const Input = ({
         className={inputText}
         name={name}
         onChange={handleOnChange}
-        placeholder={palceholder}
+        placeholder={placeholder}
         required={required}
         type={type}
       />
